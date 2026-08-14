@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+# Runtime output and local CrewAI state
+.crewai/
+*.log
+report.md
+poem.txt
+storage_knowledge/
+chromadb-*.lock
+
+# Local secrets and generated model artifacts
+.env.*
+*.pkl

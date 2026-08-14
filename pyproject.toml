@@ -1,0 +1,27 @@
+[project]
+name = "learn-crew-ai"
+version = "0.1.0"
+description = "Production-oriented CrewAI examples and reference implementations"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "crewai[tools]>=1.15.16,<2.0.0",
+    "httpx>=0.28.1,<1.0.0",
+    "pydantic>=2.0,<3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "pytest>=8.0,<9.0",
+]
+
+[project.scripts]
+learn-crew-ai = "learn_crew_ai.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["learn_crew_ai"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
